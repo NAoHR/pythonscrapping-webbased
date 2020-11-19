@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='choose.css')}}">
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=">
+  	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <title></title>
+</head>
+<body>
+  <div class="full">
+    <div class="topcolor">
+    </div>
+    <div class="bottomcolor"></div>
+    <div class="main">
+      <div class="content">
+        <h2>song:</h2>
+        	{%for item in test%}
+		<p>{{item.text}}</p>
+	{%endfor%}
+      </div>
+      <div class="contentright">
+      <h1>Choose</h1>
+	<form action="/lagu" method="post">
+</br>
+    <input type="text" name="pilihan"><br>	
+		<input type="submit" name="" value="choose">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

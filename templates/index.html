@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">  -->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='index.css')}}">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet"> 
+	<style type="text/css">
+		.belakang{
+			background-image:url("{{url_for('static',filename='back2.jpg')}}");
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	<div class="wrap">
+		<div class="welcome">
+			<h2 id="cntr" class="mega">welcome to the lyrics scrapper</h2>
+		</div>
+	</div>
+	<div class="belakang">
+		<div class="inputan">
+			<form action="/lryscrap" method="post">
+				<input type="text" name="song" class="inputt"> <br>
+				<input type="submit" name="" value="search">
+			</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='choose.css')}}">
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=">
+  	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='hasil_akhir.css')}}">
+  <!-- <link rel="stylesheet" type="text/css" href="../static/hasil_akhir.css"> -->
+  <title></title>
+</head>
+
+<body>
+  <div class="topbar">
+    <h1>lyrics</h1>
+  </div>
+  <div class="bottombar">
+    <br>
+		{%for item in r.split("<br/>")%}
+			<p>{{item}}</p>
+		{%endfor%}
+  </div>
+</body>
+
+</html>
