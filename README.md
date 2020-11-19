@@ -23,6 +23,9 @@ cd /(to this python file directory)
 export FLASK_APP=backend.py FLASK_DEBUG=1
 flask run
 ```
+## goto
+http://127.0.0.1:5000/lryscrap
+why im not put this directory in main directroy.because im going to update this scrappy tools which filled with more advanced tools
 ## home page
 ![alt text](https://github.com/NAoHR/pythonscrapping-webbased/blob/main/images/Screenshot_2020-11-18%20Screenshot.png)
 ## choosing page
