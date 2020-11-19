@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=">
+  <!-- <link rel="stylesheet" type="text/css" href="newindex.css"> -->
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='newindex.css')}}">
+  <title></title>
+</head>
+<body>
+  <div class="full">
+    <div class="topcolor">
+    </div>
+    <div class="bottomcolor"></div>
+    <div class="contentright">
+      <h4>search Lyrics</h4>
+      <form action="/lryscrap" method="post">
+        <input type="text" name="song" class="inputt"> <br>
+        <input type="submit" name="" value="search">
+      </form>
+    </div>
+    <div class="content">
+      <h1>Lyrics scrapper</h1>
+      <h2>author:veex</h2>
+      <h3>all the lyrics are from<a href="https://www.azlyrics.com/"></br>www.azlyrics.com</a></h3>
+    </div>
+  </div>
+</body>
+</html>
