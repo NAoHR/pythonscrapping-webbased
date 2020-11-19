@@ -16,17 +16,18 @@ Use the package manager to install some library using pip
 pip install flask
 pip install bs4
 ```
-#USAGE
+##USAGE
 ```bash
+git clone https://github.com/NAoHR/pythonscrapping-webbased.git
 cd /(to this python file directory)
 export FLASK_APP=backend.py FLASK_DEBUG=1
 flask run
 ```
-#home page
+##home page
 ![alt text](https://github.com/NAoHR/pythonscrapping-webbased/blob/main/images/Screenshot_2020-11-18%20Screenshot.png)
-#choosing page
+##choosing page
 ![alt text](https://github.com/NAoHR/pythonscrapping-webbased/blob/main/images/Screenshot_2020-11-18%20Screenshot(2).png)
-#result page
+##result page
 ![alt text](https://github.com/NAoHR/pythonscrapping-webbased/blob/main/images/Screenshot_2020-11-19%20Screenshot.png)
 ## Contributing
 Pull requests are welcome. For changes, please open an issue first to discuss what you would like to change.
