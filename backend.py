@@ -2,6 +2,8 @@ from flask import Flask,render_template,request,url_for,redirect
 from bs4 import BeautifulSoup
 import datetime
 import requests
+#author : najmi/veex/NAoHR
+#twitter: https://twitter.com/bintangbhsarab
 
 app = Flask(__name__)
 song = []
