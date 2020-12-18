@@ -3,9 +3,9 @@ from bs4 import BeautifulSoup
 import datetime
 import requests
 import os
-
+#author:VeeX/NAoHR/Najmi
 app = Flask(__name__)
-app.secret_key = "akwokodqojdqowmeoqmweoqmeoqjodqwrohgq123123%^#^@&@%T$"
+app.secret_key = "akwokodqojdqowmeoqmweoqmeoqjodqwrohgq123123%^#^@&@%T$" #this is just a random strihng
 song = []
 
 @app.route("/lryscrap",methods=["POST","GET"])
