@@ -1,17 +1,18 @@
-from flask import Flask,render_template,request,url_for,redirect
+from flask import Flask,render_template,request,url_for,redirect,session
 from bs4 import BeautifulSoup
 import datetime
 import requests
-#author : najmi/veex/NAoHR
-#twitter: https://twitter.com/bintangbhsarab
+import os
 
 app = Flask(__name__)
+app.secret_key = "akwokodqojdqowmeoqmweoqmeoqjodqwrohgq123123%^#^@&@%T$"
 song = []
 
 @app.route("/lryscrap",methods=["POST","GET"])
 def home():
 	if request.method == "POST":
 		global lagu2
+		session["pilih"] = request.form['song']
 		lagu2 = "".join(map(str,(request.form["song"])))
 		plus = lagu2.replace(" ","+")
 		try:
@@ -24,7 +25,7 @@ def home():
 			global link
 			link = pemisahan.find_all('td',class_='text-left visitedlyr')
 		except AttributeError:
-			return("try another song")
+			return render_template("errorhandling.html",errormessage="try another song")
 		global kumpulan
 		kumpulan = []
 		j = 0
@@ -41,8 +42,12 @@ def pilih():
 		try:
 			number = int(request.form["pilihan"])
 		except ValueError:
-			return "u choose nothing"
-		seperate = kumpulan[number-1]
+			errormessage = "u choose nothing"
+			return render_template("errorhandling.html",errormessage=errormessage)
+		try:
+			seperate = kumpulan[number-1]
+		except IndexError:
+			return render_template("errorhandling.html",errormessage="You choose nothing")
 		seperate1 = [item for item in seperate]
 		close = str(seperate1)
 		go_to = close[close.find('//')+2:close.find('>')-1]
@@ -64,13 +69,24 @@ def pilih():
 			final5 = "".join(map(str,final10))
 			return render_template("hasil_akhir.html",r=final5)
 		except AttributeError:
-			return"error"
-	return render_template("choose.html",test=link)
+			return render_template("errorhandling.html",errormessage="ERROR")
+	if "pilih" in session:
+		try:
+			return render_template("choose.html",test=link)
+		except NameError:
+			return redirect(url_for("home"))
+	else:
+		return redirect(url_for("home"))
 @app.route("/result")
 def finale():
 	return render_template("hasil_akhir.html",r=final5)
-
-
+# @app.route("/test",methods=['POST','GET'])
+# def anjay():
+# 	return render_template('test.html')
+# @app.route("/work",methods=['POST','GET'])
+# def mantap():
+# 	return render_template('newindex.html')
 # @app.route("/lryscrap/lagu")
 # def pilih():
 # 	return song
+
