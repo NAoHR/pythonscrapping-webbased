@@ -23,6 +23,8 @@ cd /(to this python file directory)
 export FLASK_APP=backend.py FLASK_DEBUG=1
 flask run
 ```
+## important message
+if you want to change the interface of the websites,youcan refresh by pressing "shift" and refresh button due to clear all the cache in your webbrowser
 ## goto
 http://127.0.0.1:5000/lryscrap
 why im not put this directory in main directroy.because im going to update this scrappy tools which filled with more advanced tools
